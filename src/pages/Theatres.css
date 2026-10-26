@@ -1,0 +1,173 @@
+/* Theatres.css */
+
+.theatres-page {
+  min-height:100vh;
+  padding-top:68px;
+}
+
+.theatres-page__header {
+  background:linear-gradient(135deg, rgba(var(--accent-rgb), 0.08) 0%, transparent 100%);
+  border-bottom:1px solid rgba(var(--accent-rgb), 0.12);
+  padding:3rem 1.5rem;
+}
+
+.theatres-page__header-inner {
+  max-width:1400px;
+  margin:0 auto;
+}
+
+.theatres-page__header h1 {
+  font-size:2.2rem;
+  font-weight:800;
+  color: var(--text-primary);
+  margin:0 0 0.5rem;
+}
+
+.theatres-page__header p {
+  font-size:0.95rem;
+  color:rgba(var(--ink-rgb), 0.53);
+  margin:0;
+}
+
+.theatres-page__body {
+  max-width:1400px;
+  margin:0 auto;
+  padding:2.5rem 1.5rem 5rem;
+}
+
+.theatres-page__grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:1.5rem;
+  margin-bottom:3rem;
+}
+
+/* Theatre card */
+.theatre-card {
+  background:rgba(255, 255, 255, calc(0.03 * var(--glass-k)));
+  border:1px solid rgba(var(--ink-rgb), 0.11);
+  border-radius:16px;
+  padding:1.5rem;
+  transition:transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.theatre-card:hover {
+  transform:translateY(-5px);
+  border-color:rgba(var(--accent-rgb), 0.3);
+  box-shadow:0 12px 40px rgba(var(--shadow-rgb), 0.16), 0 0 0 1px rgba(var(--accent-rgb), 0.1);
+}
+
+.theatre-card__top {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin-bottom:1rem;
+}
+
+.theatre-card__icon {
+  width:50px;
+  height:50px;
+  border-radius:12px;
+  background:rgba(var(--accent-rgb), 0.12);
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.theatre-card__rating {
+  display:flex;
+  align-items:center;
+  gap:0.3rem;
+  font-size:0.9rem;
+  font-weight:700;
+  color:rgba(var(--ink-rgb), 0.77);
+  background:rgba(var(--amber-rgb), 0.08);
+  border:1px solid rgba(var(--amber-rgb), 0.15);
+  padding:4px 10px;
+  border-radius:8px;
+}
+
+.theatre-card__name {
+  font-size:1.05rem;
+  font-weight:700;
+  color: var(--text-primary);
+  margin:0 0 0.35rem;
+}
+
+.theatre-card__location {
+  display:flex;
+  align-items:center;
+  gap:0.3rem;
+  font-size:0.85rem;
+  color:rgba(var(--ink-rgb), 0.53);
+  margin:0 0 1.1rem;
+}
+
+.theatre-card__amenities {
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+  margin-bottom:1.25rem;
+}
+
+.theatre-card__amenity {
+  display:flex;
+  align-items:center;
+  gap:0.3rem;
+  font-size:0.73rem;
+  font-weight:500;
+  padding:4px 10px;
+  border-radius:20px;
+  background:rgba(255, 255, 255, calc(0.05 * var(--glass-k)));
+  border:1px solid rgba(var(--ink-rgb), 0.14);
+  color:rgba(var(--ink-rgb), 0.65);
+}
+
+.theatre-card__btn {
+  width:100%;
+  padding:0.6rem;
+  border-radius:10px;
+  background:transparent;
+  border:1px solid rgba(var(--accent-rgb), 0.35);
+  color:var(--accent);
+  font-size:0.88rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s;
+}
+
+.theatre-card:hover .theatre-card__btn {
+  background:var(--accent);
+  color: var(--on-accent);
+  border-color:var(--accent);
+  box-shadow:0 0 12px rgba(var(--accent-rgb), 0.4);
+}
+
+/* Banner */
+.theatres-page__banner {
+  background:linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(var(--accent-rgb), 0.04));
+  border:1px solid rgba(var(--accent-rgb), 0.15);
+  border-radius:16px;
+  padding:2.5rem;
+  text-align:center;
+}
+
+.theatres-page__banner h2 {
+  font-size:1.4rem;
+  font-weight:700;
+  color: var(--text-primary);
+  margin:0 0 0.5rem;
+}
+
+.theatres-page__banner p {
+  font-size:0.9rem;
+  color:rgba(var(--ink-rgb), 0.57);
+  margin:0;
+}
+
+@media (max-width: 480px) {
+  .theatres-page__grid {
+    grid-template-columns:1fr;
+  }
+}
